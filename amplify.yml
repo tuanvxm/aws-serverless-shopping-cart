@@ -7,6 +7,7 @@ backend:
     preBuild:
       commands:
         - export BASE_PATH=$(pwd)
+        - apt update
         - apt install -y gcc openssl-devel bzip2-devel libffi-devel python3.8-pip
         - cd /opt && wget https://www.python.org/ftp/python/3.8.2/Python-3.8.2.tgz
         - cd /opt && tar xzf Python-3.8.2.tgz 
